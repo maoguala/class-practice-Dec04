@@ -21,17 +21,20 @@ int main(){ //CLI
         int choice = 0;
         std::cin >> choice;
         std::cout << "Your choice is: " << choice << std::endl;
-        if(choice == 6){
-            exit(0);
-        }
         std::cout << "============================================\n";
         std::cout << "Are you sure to continue with the selected? (y/n): ";
         char confirm = 'n';
         std::cin >> confirm;
-        if(confirm == 'n'){
+        if(confirm == 'y'){
             break;
+            if(choice == 6){
+                exit(0);
+            } 
         }
-        
+        //std::cout << "\033[2J\033[H"; //clear the screen
+        std::system("clear");//clear the screen, for windows use "cls"
+
+
     }
 
     
